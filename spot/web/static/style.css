@@ -1,0 +1,303 @@
+h1 {
+    margin-top: 0.5em;
+}
+
+button {
+    padding: 2px 4px 2px 4px !important;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+div.container {
+    max-width: 90%;
+}
+
+div.center-div {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+div.left-div {
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+div.footer-space {
+    height: 1em;
+}
+
+option.placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+span.help {
+    font-style: italic;
+    color: #888;
+}
+
+div.hidden {
+    display: none;
+}
+
+#settings li {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+#settings div.form-check {
+    display: inline-block;
+    margin-left: 1em;
+    margin-top: 0.25em;
+}
+#settings div.form-entry {
+    display: inline-block;
+    margin-left: 1em;
+    margin-bottom: 0.25em;
+}
+#settings div.form-entry select, label, input {
+    width: auto;
+    display: inline;
+}
+#settings div.form-entry input[type="number"] {
+    width: 70px;
+    display: inline;
+}
+
+div.result-div {
+    display: none;
+}
+
+div.event-block {
+    margin-top: 1em;
+    text-align: left;
+    background-color: #eee;
+    padding: 0.5em;
+}
+div.event-block span.event-info {
+    margin-right: 0.5em;
+    border-style: solid;
+    border-color: #444;
+    background: #fff;
+    white-space: nowrap;
+}
+div.event-block span.event-info span.key {
+    background: #444;
+    color: #fff;
+    padding: 2px;
+    padding-right: 3px;
+}
+div.event-block span.event-info span.value {
+    padding: 2px;
+    margin-left: 0.2em;
+}
+div.event-block span.event-info a.show-frames {
+    padding: 2px;
+}
+div.event-block button {
+    margin-bottom: 0.2em;
+}
+
+/* ====================================
+   MODIFICATION: AFFICHAGE HORIZONTAL
+   ==================================== */
+
+/* Container principal des frames - HORIZONTAL */
+div.frame-block {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5em 0.5em;
+    vertical-align: top;
+    min-width: 200px;
+}
+
+/* Wrapper pour toutes les frames - scrolling horizontal */
+div.frame-div {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 1em 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 0.5em;
+}
+
+/* Scrollbar personnalisée */
+div.frame-div::-webkit-scrollbar {
+    height: 10px;
+}
+
+div.frame-div::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+div.frame-div::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+div.frame-div::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Séparateur HR - vertical au lieu d'horizontal */
+div.frame-div hr {
+    display: inline-block;
+    width: 3px;
+    height: 300px;
+    background-color: #000;
+    border: none;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+/* Images des frames */
+div.frame-block img {
+    width: 200px;
+    height: auto;
+    display: block;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin: 5px auto;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+div.frame-block img:hover {
+    transform: scale(1.05);
+    border-color: #4CAF50;
+}
+
+div.frame-block img.context-frame {
+    opacity: 0.5;
+    border-style: dashed;
+}
+
+/* IMPORTANT: Cacher la deuxième image (flow) - elle est noire/vide */
+div.frame-block img:nth-of-type(2) {
+    display: none !important;
+}
+
+/* Informations de la frame */
+div.frame-block div.frame-info {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Numéro de frame - EN HAUT */
+div.frame-block div.frame-info > span:first-child {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    background-color: #e0e0e0;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    display: block;
+    width: 100%;
+}
+
+/* Labels - EN BAS (après l'image) */
+div.frame-block div.frame-info span {
+    display: block;
+    margin: 2px 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Contexte (sparse/dense) */
+div.frame-block div.frame-info span.context {
+    font-weight: bold;
+    color: #999;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* Ground truth - ROUGE - EN BAS */
+div.frame-block div.frame-info span.ground-truth {
+    font-weight: bold;
+    color: #f00;
+    margin-top: 8px;
+    padding: 3px 6px;
+    background-color: #ffe6e6;
+    border-radius: 3px;
+}
+
+/* Prediction - BLEU - EN BAS */
+div.frame-block div.frame-info span.predicted {
+    font-weight: bold;
+    color: #00f;
+    margin-top: 5px;
+    padding: 3px 6px;
+    background-color: #e6f2ff;
+    border-radius: 3px;
+}
+
+/* Autres prédictions */
+div.frame-block div.frame-info span.predicted-other {
+    font-weight: bold;
+    color: #6699ff;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* Autres ground truth */
+div.frame-block div.frame-info span.ground-truth-other {
+    font-weight: bold;
+    color: #ff6666;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+/* Highlighting pour la frame centrale (événement exact) */
+div.frame-block.event-frame {
+    background-color: #fff9c4;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+div.frame-block.event-frame img {
+    border-color: #ffc107;
+    border-width: 3px;
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.4);
+}
+
+div.frame-block.event-frame div.frame-info > span:first-child {
+    background-color: #ffc107;
+    color: white;
+    font-weight: 900;
+}
+
+/* Bouton +/- pour fermer/ouvrir */
+div.frame-div > span.event-info {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+span.data-value {
+    font-style: italic;
+    color: #f00;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    div.frame-block {
+        min-width: 150px;
+    }
+    
+    div.frame-block img {
+        width: 150px;
+    }
+    
+    div.frame-block div.frame-info {
+        width: 150px;
+    }
+}

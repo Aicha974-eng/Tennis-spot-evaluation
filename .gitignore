@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.venv/
+venv/
+env/
+tennis_env/
+
+# IDE
+.vscode/
+.idea/
+
+# Fichiers de modèles volumineux
+*.pt
+*.pth
+*.h5
+*.weights
+*.ckpt
+
+# Vidéos et frames
+spot/data/tennis/frames/
+spot/data/tennis/video/
+*.mp4
+*.avi
+*.mov
+
+# Fichiers compressés
+*.gz
+*.zip
+
+# Temporaires
+*.log
+*.tmp
+.DS_Store
