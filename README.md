@@ -53,8 +53,12 @@ The model detects 6 tennis event types:
 - Configured PyTorch with CUDA support(use CPU if GPU not available)
 
 **2. Data Preparation**
-- Download the tennis match video with a duration of 3 hours (wimbledon_2019_mens_semifinal_federer_nadal) whose annotation already exists in the data/tennis
+- Download the tennis match video whose annotation already exists in the data/tennis
 /test.json file.
+In the JSON files, each video is separated into clips containing a certain number of frames.
+In our case, we are only interested in the data/tennis/test.json file, where we chose to test on a single video (wimbledon_2019_mens_semifinal_federer_nadal), which contains 146 clips representing approximately 42 minutes of tennis video in total, with clips averaging around 14 seconds.
+
+This is a small portion of the complete 3-hour match, containing only the annotated action segments (points of play).
 - Extracted approximately 15,000 frames at 25 FPS
 - Organized dataset according to SPOT structure requirements
 
