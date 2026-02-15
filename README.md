@@ -32,10 +32,6 @@ The model detects 6 tennis event types:
 - Swing (near court / far court)
 - Bounce (near court / far court)
 
-### Important Note
-
-This is an **evaluation and analysis project**. We did not modify the model architecture, perform training, or fine-tuning. All experiments use publicly available pre-trained checkpoints from the SPOT authors.
-
 ---
 
 ## Objectives
@@ -57,7 +53,7 @@ This is an **evaluation and analysis project**. We did not modify the model arch
 - Configured PyTorch with CUDA support(use CPU if GPU not available)
 
 **2. Data Preparation**
-- Downloaded professional tennis match videos (Wimbledon)
+- Downloaded professional tennis match videos (wimbledon_2019_mens_semifinal_federer_nadal) 
 - Extracted approximately 15,000 frames at 25 FPS
 - Organized dataset according to SPOT structure requirements
 
