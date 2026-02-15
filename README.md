@@ -57,9 +57,8 @@ The model detects 6 tennis event types:
 /test.json file.
 In the JSON files, each video is separated into clips containing a certain number of frames.
 In our case, we are only interested in the data/tennis/test.json file, where we chose to test on a single video (wimbledon_2019_mens_semifinal_federer_nadal), which contains 146 clips representing approximately 42 minutes of tennis video in total, with clips averaging around 14 seconds.
-
 This is a small portion of the complete 3-hour match, containing only the annotated action segments (points of play).
-- Extracted approximately 15,000 frames at 25 FPS
+- Extracted approximately 15,000 frames at 25 FPS using frames_as_jpg.py
 - Organized dataset according to SPOT structure requirements
 
 **3. Model Selection**
@@ -76,7 +75,7 @@ This is a small portion of the complete 3-hour match, containing only the annota
 
 **5. Analysis**
 - Per-event performance breakdown
-- Identified model strengths (serves: 99.25%) and limitations (bounces: 89-92%)
+- Identified model strengths and limitations
 - Analyzed impact of temporal tolerance and camera distance
 - Generated prediction visualizations
 
